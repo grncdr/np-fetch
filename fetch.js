@@ -1,15 +1,15 @@
 'use strict';
 
 var fs = require('fs');
-var http = require('http-https');
 var path = require('path');
 var url = require('url');
+var http = require('http-https@^1.0.0');
 
-var Promise = require('bluebird');
-var concatStream = require('concat-stream');
-var semver = require('semver');
-var tmpName_ = Promise.promisify(require('tmp').tmpName);
-var hashFile = Promise.promisify(require('hash_file'));
+var Promise = require('github.com/petkaantonov/bluebird@^2.2.0');
+var concatStream = require('concat-stream@^1.4.6');
+var semver = require('semver@^2.3.1');
+var tmpName_ = Promise.promisify(require('tmp@^0.0.23').tmpName);
+var hashFile = Promise.promisify(require('hash_file@^0.1.1'));
 
 module.exports = fetch;
 module.exports.json = getJSON;
